@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-memory-store"
+version = "0.1.0"
+description = "Persistent, queryable memory layer across sessions (short-term, knowledge graph, and episodic memory)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "erron.ai"}]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/erron-ai/agent-memory-store"
+Issues = "https://github.com/erron-ai/agent-memory-store/issues"
+
+[project.scripts]
+agent-memory-store = "agent_memory_store.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
